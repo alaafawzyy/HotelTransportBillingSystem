@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/firstSection"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+
+            android:background="#FDFDFD"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:textSize="12sp"
+                        android:textColor="#70333F"
+                        android:text="شركة سادن الذهبية"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#70333F"
+                        android:text="س-ت:1010872520"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/logosadin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text=" التاريخ: "
+                    android:layout_marginStart="3dp"
+                    />
+                <TextView
+                    android:id="@+id/date1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text=" 17/11/2024" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginStart="3dp"
+                    android:text="م "/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:text="تم ابرام هذا العقد بين المتعاقدين بناء علي المادة (39) التاسعة والثلاثون من اللائحة المنظمة لنشاط النقل المتخصص وتأجير وتوجيه الحافلات وبناء على الفقرة (1) من المادة (39) والتي تنص علي ان يجب علي الناقل ابرام عقد نقل مع الأطراف المحددين في المادة (40) قبل تنفيذ عمليات النقل على الطرق البرية وبما لا يخالف احكام هذه اللائحة ووفقا للآلية التي تحددها هيئة النقل "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="وبناء على ما سبق تم ابرام عقد النقل بين الاطراف الآتية"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="الطرف الاول:"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="شركة سادن الذهبية لخدمات النقل ترخيص رقم :35/00002033"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="الطرف الثاني: السيد / :"/>
+                <TextView
+                    android:id="@+id/client_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="أسماعيل الحمادي"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:text="اتفق الطرفان على ان ينفذ الطرف الأول عملية النقل للطرف الثاني مع مرافقيه وذويهم من الموقع المحدد مسبقا مع الطرف الثاني وتوصيلهم الى الجهه المحدده بالعقد"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="النقل من: "/>
+                <TextView
+                    android:id="@+id/start1_trip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:text="مطار الملك عبدالعزيز"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text=" وصولا الى: "/>
+                <TextView
+                    android:id="@+id/end1_trip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:text="مكة المكرمة"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="مدة الرحلة: "/>
+                <TextView
+                    android:id="@+id/trip_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:text="ساعة وربع"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text=" سعر الرحلة: "/>
+                <TextView
+                    android:id="@+id/trip_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:text="آجل ر.س"
+                    />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:padding="6dp"
+                android:layout_marginTop="10dp"
+                android:text="في حال الغاء التعاقد لاي سبب شخصي او أسباب اخري تتعلق في الحجوزات او الأنظمة تكون سياسة الإلغاء والاستبدال حسب نظام وزارة التجارة السعودي فى حالة الحجز وتم الإلغاء قيل موعد الرحلة بأكثر من 24 ساعة يتم استرداد المبلغ كامل. في حالة طلب الطرف الثاني الحجز من خلال الموقع الالكتروني للمؤسسة يعتبر هذا الحجز وموافقته على الشروط والاحكام بالموقع الإلكتروني هو موافقة على هذا العقد لتنفيذ عملية النقل المتفق عليها من الطرف الاول بواسطة حافلات المؤسسة المرخصة والمتوافقة مع الاشتراطات المقررة من هيئة النقل"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bottom_logo"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="150dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/secondSection"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:layout_weight="1">
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="#70333F"
+                         android:text="شركة"
+                         android:layout_gravity="start"
+                         android:textSize="8sp"
+                         android:textStyle="bold"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="سادن الذهبية"
+                         android:textColor="#70333F"
+                         android:textSize="8sp"
+                         android:textStyle="bold"
+                         android:layout_gravity="start"
+                         />
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="لخدمات النقل "
+                         android:textColor="#70333F"
+                         android:layout_gravity="start"
+                         android:textSize="8sp"
+                         android:textStyle="bold"/>
+                 </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="بيانات السائق والركاب"
+                            android:textSize="8sp"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="لشركة سادن الذهبية"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#70333F"
+                            android:layout_gravity="end"
+                            android:text="ٍSaden Transport"
+                            android:textSize="8sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="L.N:35/00002033"
+                            android:textColor="#70333F"
+                            android:textSize="8sp"
+                            android:layout_gravity="end"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C.R:1010872520"
+                            android:textColor="#70333F"
+                            android:layout_gravity="end"
+                            android:textSize="8sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#70333F"
+                        android:textSize="8sp"
+                        android:layout_weight="1"
+                        tools:text="التاريخ:11-12-2024"/>
+                    <TextView
+                        android:id="@+id/trip_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#70333F"
+                        android:layout_weight="1"
+                        android:textSize="8sp"
+                        tools:text="وقت الرحلة : 02.25"/>
+                    <TextView
+                        android:id="@+id/day_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#70333F"
+                        android:layout_weight="1"
+                        android:textSize="8sp"
+                        tools:text="اليوم : الثلاثاء"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/start_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#70333F"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        tools:text="رحله من : مطار الملك عبدالعزيز"/>
+                    <TextView
+                        android:id="@+id/end_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#70333F"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        tools:text="الي:مكة المكرمة"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/trip_numb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#70333F"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    tools:text="رقم الرحلة : Ex801"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_border2"
+                    >
+
+                    <!-- Header Row -->
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_border2"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="اسم السائق"
+                            android:textColor="#70333F"
+                            android:textSize="7dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="الجوال"
+                            android:gravity="center"
+                            android:textSize="7dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="اقامة/هوية"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="7dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="السيارة"
+                            android:gravity="center"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="رقم اللوحة"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="7dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <!-- Data Row -->
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/driver_name_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="سالم احمد باعبيد"
+                            android:gravity="center"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/driver_phone_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            tools:text="1050821436"
+                            android:gravity="center"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/id_number_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            tools:text="0531226363"
+                            android:gravity="center"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/car_type_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="كيا"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/board_num_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="ر ح ل 7515"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="7dp"
+                            android:maxLines="1"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+                    </TableRow>
+                </TableLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_border2"
+                    >
+
+                    <!-- Header Row -->
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="اسم العميل"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الجنسية"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الهوية/الجواز"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="رقم التواصل"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <!-- Data Row -->
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/client_name_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="سالم احمد باعبيد"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/client_nationality_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="1050821436"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+                        <TextView
+                            android:id="@+id/id_client_number_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="0531226363"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+
+
+                        <TextView
+                            android:id="@+id/phone_num_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="ر ح ل 7515"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:maxLines="1"
+                            android:textColor="#000000"
+                            android:background="@drawable/cell_border2" />
+                    </TableRow>
+                </TableLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/black"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_border2"
+                    >
+
+                    <!-- Header Row -->
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="#"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="اسم العميل "
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الجنسية"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الهوية/الجواز"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="2"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="3"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="4"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="5"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="6"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="8dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="8dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="7"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="8"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="9"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+                    <TableRow android:background="@drawable/table_border2"
+                        android:backgroundTint="@color/black">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="10"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/person_id_num_10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:textSize="10dp"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_nationality_10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:padding="8dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_id_10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textSize="10dp"
+                            android:textColor="#70333F"
+                            android:background="@drawable/cell_border2"
+                            android:textStyle="bold" />
+
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="**ملاحظة هامة**"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10sp"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:text="** فى حال عدم تطابق بيانات الضيف مع الاثبات نكن عرضه للجزاء وهذا تعهد منا بذلك **"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="للإستفسارات: 00966558605290"
+                    android:layout_gravity="start"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/hagez_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="#70333F"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/bottom_logo"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+    </ScrollView>
+

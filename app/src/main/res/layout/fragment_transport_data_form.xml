@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/text_field_border">
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_border2"
+                android:textColorHint="#737171"
+                android:hint="Data"
+                android:textStyle="bold"
+                android:textColor="#B1ADAD"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="موضوع فاتورة"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/invoice_subject_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اسم الشركة"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/company_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            />
+
+            <EditText
+                android:id="@+id/company_details_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="معلومات الشركة"
+                android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اسم الموظف"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/employee_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            />
+
+
+
+
+
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_margin="30dp"
+          android:background="@color/gray"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/guest_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Guest Name"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:id="@+id/add_entered1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل الاول "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"/>
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv1"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:layout_marginTop="10dp"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل الثاني"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv2"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                                        android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل لثالث"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+         <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+             android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date_entered_tv3"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+    </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_entered4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل الرابع"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date_entered_tv4"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل الخامس"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv5"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner5"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل السادس"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv6"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+                    android:visibility="visible"
+                    />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل السابع"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv7"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner7"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل الثامن"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv8"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner8"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل التاسع"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv9"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner9"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_entered10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة المدخل العاشر"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/car_type_tv10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Car Type"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/debit_tv10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rate"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/date_entered_tv10"
+                    android:layout_width="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#737171"
+                    android:hint="Date"
+                    android:textStyle="bold"
+                    android:textColor="#B1ADAD"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/invoice_details_spinner10"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="18sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border"
+
+                    android:visibility="visible"
+                    />
+
+
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/total_amount_number_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="المجموع ارقام"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/total_amount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" المجموع كتابة"
+                android:gravity="center"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_margin="30dp"
+            android:background="@color/gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ذيل فاتورة"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/invoice_tail_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_tail_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الهاتف"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fax_tail_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="فاكس"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="7dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/website_tail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الموقع"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="طباعة "
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

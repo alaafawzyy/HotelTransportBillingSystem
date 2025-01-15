@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="12dp"
+    tools:context=".fragment.transport.TransportPrintActivity">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/logo"
+        android:src="@drawable/transport_logo"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-10dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:textSize="10dp"
+            tools:text="17/11/2024"
+
+            android:layout_weight="1.5"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_gravity="end"
+            android:text="Date:"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="-10dp"
+        android:weightSum="2"
+        android:layout_marginTop="3dp"
+     >
+        <TextView
+            android:id="@+id/invoice_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="start"
+            android:textSize="10dp"
+
+            tools:text="Transportation"
+
+            android:layout_weight="1.5"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_gravity="end"
+            android:text="Subject:"
+            android:layout_marginTop="-5dp"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginTop="3dp"
+        >
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="start"
+            android:textSize="10dp"
+            tools:text="Transportation"
+
+            android:layout_weight="1.5"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_gravity="end"
+            android:text="Gentlemen:"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginTop="3dp"
+       >
+        <TextView
+            android:id="@+id/employee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="start"
+            android:textSize="10dp"
+            tools:text="Attention"
+
+            android:layout_weight="1.5"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:layout_gravity="end"
+            android:text="Subject:"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please be informed that you are required to pay the below mentioned invoice of
+transportation for your guest as follow"
+        android:textSize="10dp"
+        android:layout_margin="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@android:color/transparent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:layout_marginTop="3dp"
+        >
+        <TextView
+            android:id="@+id/guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="start"
+            android:textSize="10dp"
+            android:layout_marginEnd="6dp"
+            tools:text="Attention"
+
+            android:layout_weight="1.5"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Guest Name:"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        >
+
+        <!-- Header Row -->
+        <TableRow android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/cell_border"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Rate"
+                android:textColor="#70333F"
+                android:textSize="7dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Transaction Details"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:padding="8dp"
+                android:textColor="#70333F"
+                android:background="@drawable/cell_border"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Date"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="7dp"
+                android:textColor="#70333F"
+                android:background="@drawable/cell_border"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="CarType"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="#70333F"
+                android:background="@drawable/cell_border"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <!-- Data Row -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/rate1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car1"
+                android:layout_width="0dp"
+                android:padding="4dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:textSize="7dp"
+                android:gravity="start"
+                android:layout_gravity="start"
+
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        android:visibility="gone"
+               >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        android:visibility="gone"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:padding="4dp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        android:visibility="gone"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        android:visibility="gone"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:padding="4dp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/rate6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:background="@drawable/cell_border2"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+
+                android:textSize="7dp"
+                tools:text="1050821436" />
+
+            <TextView
+                android:id="@+id/invince6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/table8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/table10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:visibility="gone"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rate10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/invince10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="0531226363"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/date10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="كيا"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:id="@+id/car10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:text="ر ح ل 7515"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/total_amount_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                tools:text="1050821436"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                 android:text="Balance to pay"
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:background="@drawable/cell_border2" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="7dp"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:background="@drawable/cell_border2" />
+        </TableRow>
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        />
+    <TextView
+        android:id="@+id/total_amount_tv_abc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Six Hundred Saudi Riyals "
+        android:textSize="8dp"
+        android:gravity="end"
+        android:layout_marginTop="-4dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="We are pleased to receive your contacts in case of any enquiry.
+Allah grants success "
+        android:textSize="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Coordinator "
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salem Ba-Obaid "
+        android:textSize="10dp"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/transport_signature"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:layout_marginTop="50dp"
+
+
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_gravity="end"
+                android:textColor="#B85757"
+                tools:text="المملكة العربية السعودية"/>
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_gravity="end"
+                android:textColor="#B85757"
+                tools:text="0114263460"/>
+            <TextView
+                android:id="@+id/fax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:textSize="10dp"
+                android:textColor="#B85757"
+                tools:text="المملكة العربية السعودية"/>
+            <TextView
+                android:id="@+id/website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="#B85757"
+                tools:text="المملكة العربية السعودية"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1.5dp"
+            android:background="#B85757"
+            android:layout_marginStart="3dp"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+</LinearLayout>

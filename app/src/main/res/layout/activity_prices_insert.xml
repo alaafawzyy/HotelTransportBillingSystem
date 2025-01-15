@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="16dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@drawable/table_border2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+            <EditText
+                android:id="@+id/cartype1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:textStyle="bold"
+                android:text="Coaster \n16 Pax  "
+                android:ellipsize="end"
+
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+            <EditText
+                android:id="@+id/cartype2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+
+                android:text="Hiace \n10 Pax "
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+
+            <EditText
+                android:id="@+id/cartype3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+
+                android:text="GMC 23 \n7 Pax "
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+
+            <EditText
+                android:id="@+id/cartype4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold"
+
+                android:text="GMC \n7 Pax "
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+
+            <EditText
+                android:id="@+id/cartype5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:text="Family Car\n VIP \n5 Pax "
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+
+            <EditText
+                android:id="@+id/cartype6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:text="H1\n7 Pax"
+                android:textStyle="bold"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+
+            <EditText
+                android:id="@+id/cartype7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cell_border_dark_green"
+                android:ellipsize="end"
+                android:text="Ford\n4 Pax "
+                android:gravity="center"
+                android:textSize="7sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cartype8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Saloon\n4 Pax "
+
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_dark_green"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="6dp"
+                android:ellipsize="end"
+                android:text="Directions"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type16"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type17"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type18"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:ellipsize="end"
+
+                android:padding="6dp"
+                android:text=" Jeddah airport to Makkah\n(or vice versa) "
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type24"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type26"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type27"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type28"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:padding="6dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:text="Madena airport to hotels\n(or vice versa) "
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green"
+               />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type34"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type35"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type36"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type37"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type38"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:gravity="center"
+                android:ellipsize="end"
+
+                android:text="Taif airport to Makkah\n(or vice versa)"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type41"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type42"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type43"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type45"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type46"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type47"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+            <EditText
+                android:id="@+id/car_type48"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="6dp"
+
+                android:ellipsize="end"
+                android:text="kkah To Madena\n(or vice versa)"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type51"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type52"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type53"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type54"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type55"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type56"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type57"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type58"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:background="@drawable/cell_border_dark_green"
+                android:ellipsize="end"
+
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Makkah Train Station to\nhotels\n(or vice versa) "
+                android:textSize="7sp"
+
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type61"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type62"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type63"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type64"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type65"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type66"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type67"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type68"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:background="@drawable/cell_border_dark_green"
+                android:padding="6dp"
+                android:text="Madena Train Station to\nhotels\n(or vice versa)"
+                android:textSize="7sp"
+
+             />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type71"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type72"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type73"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type74"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type75"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type76"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type77"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type78"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:padding="6dp"
+                android:text="Jeddah to Airport \n(or vice versa) "
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/table_border2"
+            android:backgroundTint="@color/black">
+
+            <EditText
+                android:id="@+id/car_type81"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type82"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type83"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type84"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:id="@+id/car_type85"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type86"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+
+            <EditText
+                android:id="@+id/car_type87"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+
+                android:background="@drawable/cell_border_green"  />
+            <EditText
+                android:id="@+id/car_type88"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_green" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="6dp"
+                android:ellipsize="end"
+
+                android:text="Mazarat (Two hours) \nMakkah or Madena "
+                android:textSize="7sp"
+                android:background="@drawable/cell_border_dark_green" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="@color/black"/>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="حفظ الاسعار"
+        />
+
+
+
+</LinearLayout>

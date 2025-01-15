@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اسم السائق"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <Spinner
+                android:id="@+id/driver_spinner"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_border"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/driver_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="رقم جوال السائق"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/driver_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:padding="10dp"
+                android:hint="رقم هوية السائق" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نوع السيارة"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/car_spinner"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/spinner_border"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            />
+
+            <EditText
+                android:id="@+id/car_palte_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="رقم اللوحة"
+                android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/client_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/client_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم العميل "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hagez_num"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hagez_num_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الحجز"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/day_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اليوم "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_border2"
+                android:textColorHint="#333333"
+                android:hint="التاريخ"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_start_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="بداية الرحلة "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_end"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_end_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="نهاية الرحلة"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_number_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الجوال "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_num"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_num_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الرحلة"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/arrive_time_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border2"
+                    android:textColorHint="#333333"
+                    android:hint="وقت الوصول "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/arrivalHall"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/arrivalHallTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="صالة الوصول"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/add_more_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="عرض المذيد "
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"/>
+        <LinearLayout
+            android:id="@+id/add_more_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/client_nationality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/client_nationality_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="جنسية الضيف"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/client_id_num"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/client_id_num_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/add_more_details_container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_price_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="سعر الرحله "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_duration"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_duration_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="مدة الرحلة"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/add_person1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق "
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"/>
+        <LinearLayout
+                android:id="@+id/person_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="10dp"
+            android:visibility="gone">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/person_name_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/person_name_1_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="اسم المرافق "
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/person_nationality_1"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/person_nationality_1_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="الجنسية"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/person_id_num_1"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_field_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/person_id_num_1_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="رقم الهوية"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_person2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق ثاني"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_2"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_2"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_2_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_person3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق ثالث"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_3"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_3"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_3_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_person4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق الرابع"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_4"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_4"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_4_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_person5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق الخامس"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_5"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_5"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_5_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_person6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق السادس"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_6_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_6"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_6_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_6"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_6_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_person7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق السابع"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_7_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_7"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_7_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_7"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_7_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_person8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق الثامن"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_8_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_8"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_8_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_8"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_8_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/add_person9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق التاسع"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_9_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_9"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_9_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_9"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_9_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/add_person10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="اضافة مرافق العاشر"
+            android:textSize="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textColor="#3F51B5"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/person_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_name_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_name_10_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="اسم المرافق "
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_nationality_10"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_nationality_10_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="الجنسية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/person_id_num_10"
+                android:layout_width="0dp"
+                android:layout_marginStart="7dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_field_border">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/person_id_num_10_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="رقم الهوية"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingBottom="50dp">
+            <Button
+                android:id="@+id/btn_normal_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طباعة "
+                android:layout_marginEnd="15dp"
+                android:textSize="20dp"/>
+            <Button
+                android:id="@+id/btn_contract_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طباعة بعقد"
+               android:layout_marginStart="15dp"
+             android:textSize="20dp"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

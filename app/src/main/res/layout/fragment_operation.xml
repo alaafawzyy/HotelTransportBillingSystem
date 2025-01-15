@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/cell_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/data_operation"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        android:outlineSpotShadowColor="@color/gray"
+        android:outlineAmbientShadowColor="@color/gray"
+        android:elevation="50dp"
+        app:cardMaxElevation="50dp"
+        app:cardElevation="50dp"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_input_24"
+            android:layout_gravity="top|center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ادخال بيانات"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:layout_marginBottom="5dp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/operation_print"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        android:outlineSpotShadowColor="@color/gray"
+        android:outlineAmbientShadowColor="@color/gray"
+        android:elevation="50dp"
+        app:cardMaxElevation="50dp"
+        app:cardElevation="50dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_print_24"
+            android:layout_gravity="top|center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" طباعة أمر تشغيل"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:layout_marginBottom="5dp" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

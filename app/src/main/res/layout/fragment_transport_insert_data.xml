@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضافة شركة"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/company_name_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="اسم الشركة "
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/company_details_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="معلومات الشركة"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:overScrollMode="always"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnCompanySave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حفظ بيانات الشركة"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:id="@+id/btnCompanydelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حذف"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:backgroundTint="#EB4E4E"
+            android:layout_gravity="end"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضافة موظف"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/employee_name_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="اسم الموظف"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emplyee_company_name_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الشركة"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnemployeeSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حفظ بيانات الموظف"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:id="@+id/btnemployeedelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حذف"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:backgroundTint="#EB4E4E"
+            android:layout_gravity="end"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضافة موضوع فاتورة"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_subject_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="موضوع فاتورة "
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btninvoiceSubjectSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حفظ موضوع الفاتورة"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:id="@+id/btninvoiceSubjectdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حذف"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:backgroundTint="#EB4E4E"
+            android:layout_gravity="end"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضافة وصف فاتورة"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_details_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="وصف فاتورة"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:overScrollMode="always"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btninvoiceDetailsSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حفظ وصف الفاتورة"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:id="@+id/btninvoiceDetailsdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حذف"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:backgroundTint="#EB4E4E"
+            android:layout_gravity="end"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضافة ذيل  فاتورة"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_country_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الدولة"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_phone_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الهاتف"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:overScrollMode="always"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_fax_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="فاكس"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_field_border">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/invoice_websity_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الموقع الإكتروني"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:overScrollMode="always"
+                android:gravity="top|start" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btninvoicetailSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حفظ بيانات ذيل الفاتورة"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            />
+        <Button
+            android:id="@+id/btninvoicetaildelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حذف"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:backgroundTint="#EB4E4E"
+            android:layout_gravity="end"
+            />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

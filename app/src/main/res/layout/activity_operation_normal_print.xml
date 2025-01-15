@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+
+                android:layout_alignParentStart="true"
+                android:src="@drawable/logo_top" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_operation_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+               android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="#2C3D8A"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="5dp"
+                    android:text="امر تشغيل"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/num_of_7agz"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_operation_title"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="#2C3D8A"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="8dp"
+                    android:text="رقم الحجز"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/num_of_7agz_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/num_of_7agz"
+                app:layout_constraintTop_toTopOf="@id/num_of_7agz"
+                android:layout_marginStart="15dp"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="@color/white"
+                >
+                <TextView
+                    android:id="@+id/hagez_tv"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:background="@drawable/card_border"
+                    android:paddingStart="20dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="3dp"
+                    tools:text="1952"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/day"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/num_of_7agz"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="#2C3D8A"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="8dp"
+                    android:text="اليوم "
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/day_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/date"
+                app:layout_constraintTop_toTopOf="@id/day"
+                android:layout_marginStart="15dp"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="@color/white"
+                >
+                <TextView
+                    android:id="@+id/day_tv"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:background="@drawable/card_border"
+                    android:paddingStart="20dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="3dp"
+                    tools:text="الثلاثاء"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/date"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/day"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="#2C3D8A"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="8dp"
+                    android:layout_gravity="center"
+                    android:text="التاريخ "
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/date_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/date"
+                app:layout_constraintTop_toTopOf="@id/date"
+                android:layout_marginStart="15dp"
+                android:foregroundGravity="center|bottom"
+                app:cardCornerRadius="5dp"
+                android:backgroundTint="@color/white"
+                >
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:background="@drawable/card_border"
+                    android:paddingStart="20dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="20sp"
+                    android:paddingBottom="3dp"
+                    android:maxLines="1"
+                    tools:text="11/6/2024"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/driver_information_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border"
+            android:text="بيانات السائق"
+            android:layout_gravity="center"
+            android:paddingTop="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginTop="10dp"
+           >
+
+            <!-- Header Row -->
+            <TableRow android:background="@drawable/table_border">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="اسم السائق"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="رقم الهوية"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="رقم الجوال"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="نوع السيارة"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="رقم اللوحة"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Data Row -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/driver_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="سالم احمد باعبيد"
+                    android:gravity="center"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                    android:id="@+id/driver_id_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="1050821436"
+                    android:gravity="center"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                    android:id="@+id/phone_number_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="0531226363"
+                    android:gravity="center"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                    android:id="@+id/car_type_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="كيا"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                    android:id="@+id/board_num_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="ر ح ل 7515"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+            </TableRow>
+        </TableLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/client_information_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_border"
+                android:text="بيانات العميل"
+                android:layout_gravity="center"
+                android:paddingTop="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginTop="10dp"
+            >
+            <!-- Header Row -->
+            <TableRow android:background="@drawable/table_border">
+
+                <TextView
+                    android:id="@+id/client_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="العميل: ا/خالد علي الجنيبي"
+                    android:gravity="start"
+                    android:textSize="10dp"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/client_num_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="رقم العميل :965214628"
+                    android:gravity="end"
+                    android:textSize="10dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+
+
+
+
+            </TableRow>
+            <!-- Header Row -->
+            <TableRow android:background="@drawable/table_border">
+
+
+                <TextView
+                    android:id="@+id/start_trip_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    tools:text="من :جده مطار الملك عبدالعزيز"
+                    android:gravity="start"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="صالة الوصول"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="رقم الرحلة"
+                    android:gravity="center"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="وقت الوصول"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Data Row -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/end_trip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    tools:text="الي : مكة المسجد الحرام"
+                    android:gravity="start"
+                    android:textSize="8dp"
+
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                   android:id="@+id/hall_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="صاله 1"
+                    android:gravity="center"
+                    android:textSize="8dp"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                  android:id="@+id/trip_num_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="wy675"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+
+                <TextView
+                    android:id="@+id/Arrival_time_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="16:50"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+            </TableRow>
+        </TableLayout>
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/operation_logo2"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

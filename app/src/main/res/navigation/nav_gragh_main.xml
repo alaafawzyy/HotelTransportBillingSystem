@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.swiftprint.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_operationFragment"
+            app:destination="@id/operationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_transportationManagementFragment"
+            app:destination="@id/transportationManagementFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pricesTransportFragment"
+            app:destination="@id/pricesTransportFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_mainFragment_to_hotelFragment"
+        app:destination="@id/hotelFragment" />
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.example.swiftprint.HotelFragment"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" />
+    <fragment
+        android:id="@+id/operationFragment"
+        android:name="com.example.swiftprint.fragment.operation.OperationFragment"
+        android:label="fragment_operation"
+        tools:layout="@layout/fragment_operation" >
+        <action
+            android:id="@+id/action_operationFragment_to_operationInsertInformationFragment"
+            app:destination="@id/operationInsertInformationFragment" />
+        <action
+            android:id="@+id/action_operationFragment_to_operationDataFormFragment"
+            app:destination="@id/operationDataFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/operationInsertInformationFragment"
+        android:name="com.example.swiftprint.fragment.operation.OperationInsertInformationFragment"
+        android:label="fragment_operation_insert_information"
+        tools:layout="@layout/fragment_operation_insert_information" />
+    <fragment
+        android:id="@+id/operationDataFormFragment"
+        android:name="com.example.swiftprint.fragment.operation.operationDataFormFragment"
+        android:label="operationDataFormFragment" />
+    <fragment
+        android:id="@+id/transportationManagementFragment"
+        android:name="com.example.swiftprint.fragment.transport.TransportationManagementFragment"
+        android:label="TransportationManagementFragment" >
+        <action
+            android:id="@+id/action_transportationManagementFragment_to_transportInsertDataFragment"
+            app:destination="@id/transportInsertDataFragment" />
+        <action
+            android:id="@+id/action_transportationManagementFragment_to_transportDataFormFragment"
+            app:destination="@id/transportDataFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transportInsertDataFragment"
+        android:name="com.example.swiftprint.fragment.transport.TransportInsertDataFragment"
+        android:label="TransportInsertDataFragment" />
+    <fragment
+        android:id="@+id/transportDataFormFragment"
+        android:name="com.example.swiftprint.fragment.transport.TransportDataFormFragment"
+        android:label="TransportDataFormFragment" />
+    <fragment
+        android:id="@+id/priceManagrmentFragment"
+        android:name="com.example.swiftprint.fragment.price.PriceManagementFragment"
+        android:label="fragment_price_normal"
+        tools:layout="@layout/fragment_price_management" >
+    </fragment>
+    <fragment
+        android:id="@+id/pricesTransportFragment"
+        android:name="com.example.swiftprint.fragment.price.PricesTransportFragment"
+        android:label="PricesTransportFragment" >
+        <action
+            android:id="@+id/action_pricesTransportFragment_to_priceManagrmentFragment"
+            app:destination="@id/priceManagrmentFragment" />
+    </fragment>
+
+
+</navigation>
