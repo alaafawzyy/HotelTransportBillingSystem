@@ -76,6 +76,9 @@ interface InvoiceTailDao {
 
     @Query("DELETE FROM InvoiceTail WHERE country =:countryName")
     fun deleteInvoiceTailByCountryName(countryName: String)
+
+    @Query("SELECT * FROM InvoiceTail ORDER BY id DESC LIMIT 1")
+    fun getLastInvoiceTail(): LiveData<InvoiceTail>
 }
 
 

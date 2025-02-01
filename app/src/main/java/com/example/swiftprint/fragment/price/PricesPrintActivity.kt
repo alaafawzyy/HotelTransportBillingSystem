@@ -16,8 +16,10 @@ import android.text.Editable
 
 import androidx.core.widget.addTextChangedListener
 import com.example.swiftprint.database.model.AppDatabase
+
 import java.io.File
 import java.io.FileOutputStream
+
 
 class PricesPrintActivity : AppCompatActivity() {
 
@@ -31,7 +33,7 @@ class PricesPrintActivity : AppCompatActivity() {
 
         loadSavedValues()
 
-        // ربط التعديلات التلقائية بحقول النصوص
+        getInvoicefromdatabase()
         setupAutoSaveListener()
 
         val company = intent.getStringExtra("company")
@@ -43,6 +45,20 @@ class PricesPrintActivity : AppCompatActivity() {
             takeScreenshotAndSaveAsPdf()
         }
     }
+
+    private fun getInvoicefromdatabase() {
+        val invoiceTailDao =AppDatabase.getDatabase(this).invoiceTailDao()
+        invoiceTailDao.getLastInvoiceTail().observe(this, Observer { invoiceTail ->
+            invoiceTail?.let {
+                binding.country.text = it.country?.toEditable()
+                binding.fax.text = it.faxNumber?.toEditable()
+                binding.phone.text = it.phoneNumber?.toEditable()
+                binding.website.text = it.website?.toEditable()
+            }
+        })
+    }
+
+
 
     private fun loadSavedValues() {
         val sharedPreferences = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
@@ -56,6 +72,15 @@ class PricesPrintActivity : AppCompatActivity() {
         binding.phone.setText(sharedPreferences.getString("phone",  binding.phone.text.toString()))
         binding.fax.setText(sharedPreferences.getString("fax",  binding.fax.text.toString()))
         binding.website.setText(sharedPreferences.getString("website",  binding.website.text.toString()))
+
+        binding.direction1.setText(sharedPreferences.getString("direction1",  binding.direction1.text.toString()))
+        binding.direction2.setText(sharedPreferences.getString("direction2",  binding.direction2.text.toString()))
+        binding.direction3.setText(sharedPreferences.getString("direction3",  binding.direction3.text.toString()))
+        binding.direction4.setText(sharedPreferences.getString("direction4",  binding.direction4.text.toString()))
+        binding.direction5.setText(sharedPreferences.getString("direction5",  binding.direction5.text.toString()))
+        binding.direction6.setText(sharedPreferences.getString("direction6",  binding.direction6.text.toString()))
+        binding.direction7.setText(sharedPreferences.getString("direction7",  binding.direction7.text.toString()))
+        binding.direction8.setText(sharedPreferences.getString("direction8",  binding.direction8.text.toString()))
     }
 
     private fun setupAutoSaveListener() {
@@ -86,6 +111,30 @@ class PricesPrintActivity : AppCompatActivity() {
         }
         binding.website.addTextChangedListener {
             saveValue("website", binding.website.text.toString().trim())
+        }
+        binding.direction1.addTextChangedListener {
+            saveValue("direction1", binding.direction1.text.toString().trim())
+        }
+        binding.direction2.addTextChangedListener {
+            saveValue("direction2", binding.direction2.text.toString().trim())
+        }
+        binding.direction3.addTextChangedListener {
+            saveValue("direction3", binding.direction3.text.toString().trim())
+        }
+        binding.direction4.addTextChangedListener {
+            saveValue("direction4", binding.direction4.text.toString().trim())
+        }
+        binding.direction5.addTextChangedListener {
+            saveValue("direction5", binding.direction5.text.toString().trim())
+        }
+        binding.direction6.addTextChangedListener {
+            saveValue("direction6", binding.direction6.text.toString().trim())
+        }
+        binding.direction7.addTextChangedListener {
+            saveValue("direction7", binding.direction7.text.toString().trim())
+        }
+        binding.direction8.addTextChangedListener {
+            saveValue("direction8", binding.direction8.text.toString().trim())
         }
     }
 

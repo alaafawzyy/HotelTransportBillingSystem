@@ -1,6 +1,6 @@
 package com.example.swiftprint.fragment.transport
-
 import android.app.DatePickerDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -10,25 +10,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.core.view.isVisible
+import androidx.core.widget.addTextChangedListener
 import com.example.swiftprint.database.model.AppDatabase
 import com.example.swiftprint.databinding.FragmentTransportDataFormBinding
-import com.example.swiftprint.fragment.operation.OperationContractPrintActivity
+import com.example.swiftprint.fragment.transport.TransportPrintActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 import java.util.Locale
-
 
 class TransportDataFormFragment : Fragment() {
     private lateinit var binding: FragmentTransportDataFormBinding
     lateinit var calendar: Calendar
-
     private val companyNamesCache = mutableListOf<String>()
     private val invoiceDetailsNamesCache = mutableListOf<String>()
     private val invoiceSubjectNamesCache = mutableListOf<String>()
     private val invoiceTailNamesCache = mutableListOf<String>()
-
+    private val sharedPrefKey = "TransportDataFormPreferences"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -36,10 +36,12 @@ class TransportDataFormFragment : Fragment() {
         binding = FragmentTransportDataFormBinding.inflate(inflater)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
         calendar = Calendar.getInstance()
+        loadSavedValues()
+        setupAutoSaveListener()
 
         initializeCompanySpinner()
         initializeInvoiceDetailsSpinners()
@@ -105,10 +107,6 @@ class TransportDataFormFragment : Fragment() {
         picker.show()
     }
 
-
-
-
-
     private fun showDatePicker() {
         val picker = DatePickerDialog(
             requireActivity(),
@@ -131,7 +129,6 @@ class TransportDataFormFragment : Fragment() {
         )
         picker.show()
     }
-
     private fun changeVisibility10() {
         binding.linear10.isVisible=true
 
@@ -140,57 +137,47 @@ class TransportDataFormFragment : Fragment() {
         binding.linear9.isVisible=true
         binding.addEntered10.isVisible=true
     }
-
     private fun changeVisibility8() {
         binding.linear8.isVisible=true
         binding.addEntered9.isVisible=true
     }
-
-
-
     private fun changeVisibility7() {
         binding.linear7.isVisible=true
         binding.addEntered8.isVisible=true
     }
-
     private fun changeVisibility6() {
         binding.linear6.isVisible=true
         binding.addEntered7.isVisible=true
     }
-
     private fun changeVisibility5() {
         binding.linear5.isVisible=true
         binding.addEntered6.isVisible=true
     }
-
     private fun changeVisibility4() {
         binding.linear4.isVisible=true
         binding.addEntered5.isVisible=true
     }
-
     private fun changeVisibility3() {
         binding.linear3.isVisible=true
         binding.addEntered4.isVisible=true
     }
-
     private fun changeVisibility2() {
         binding.linear2.isVisible=true
         binding.addEntered3.isVisible=true
     }
-
     private fun changeVisibility1() {
         binding.linear1.isVisible=true
         binding.addEntered2.isVisible=true
     }
-
-
     private fun initializeCompanySpinner() {
         val companyDao = AppDatabase.getDatabase(requireContext().applicationContext).companyDao()
 
         companyDao.getAllCompanyNames().observe(viewLifecycleOwner) { companyNames ->
-            if (companyNames != companyNamesCache) {
+            // تحقق من أن companyNames ليست null
+            val names = companyNames ?: emptyList()
+            if (names != companyNamesCache) {
                 companyNamesCache.clear()
-                companyNamesCache.addAll(companyNames)
+                companyNamesCache.addAll(names)
                 val adapter = ArrayAdapter(
                     requireContext(),
                     android.R.layout.simple_spinner_item,
@@ -215,7 +202,6 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
     private fun initializeEmployeeSpinner(selectedCompanyName: String) {
         val employeeDao = AppDatabase.getDatabase(requireContext().applicationContext).employeeDao()
 
@@ -230,13 +216,13 @@ class TransportDataFormFragment : Fragment() {
             binding.employeeSpinner.adapter = adapter
         }
     }
-
     private fun initializeInvoiceDetailsSpinners() {
         val invoiceDetailsDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceDetailsDao()
 
         invoiceDetailsDao.getAllInvoiceDetails().observe(viewLifecycleOwner) { invoiceDetails ->
-            val invoiceDetailsNamesList = invoiceDetails.filterNotNull()
 
+            val details = invoiceDetails ?: emptyList()
+            val invoiceDetailsNamesList = details.filterNotNull()
             if (invoiceDetailsNamesList != invoiceDetailsNamesCache) {
                 invoiceDetailsNamesCache.clear()
                 invoiceDetailsNamesCache.add("") // إضافة خيار فارغ في أول القائمة
@@ -292,13 +278,13 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
-
     private fun initializeInvoiceSubjectSpinner() {
         val invoiceSubjectsDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceSubjectDao()
 
         invoiceSubjectsDao.getAllInvoiceSubject().observe(viewLifecycleOwner) { invoiceSubject ->
-            val invoiceSubjectNamesList = invoiceSubject.filterNotNull()
+            // تحقق من أن invoiceSubject ليست null
+            val subjects = invoiceSubject ?: emptyList()
+            val invoiceSubjectNamesList = subjects.filterNotNull()
             if (invoiceSubjectNamesList != invoiceSubjectNamesCache) {
                 invoiceSubjectNamesCache.clear()
                 invoiceSubjectNamesCache.addAll(invoiceSubjectNamesList)
@@ -318,14 +304,14 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
     private fun initializeInvoiceTailSpinner() {
         val invoiceTailDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceTailDao()
-
         invoiceTailDao.getAllInvoiceTail().observe(viewLifecycleOwner) { invoiceTailName ->
-            if (invoiceTailName != invoiceTailNamesCache) {
+            // تحقق من أن invoiceTailName ليست null
+            val tails = invoiceTailName ?: emptyList()
+            if (tails != invoiceTailNamesCache) {
                 invoiceTailNamesCache.clear()
-                invoiceTailNamesCache.addAll(invoiceTailName)
+                invoiceTailNamesCache.addAll(tails)
                 val adapter = ArrayAdapter(
                     requireContext(),
                     android.R.layout.simple_spinner_item,
@@ -350,8 +336,6 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
-
     private fun updateinvoiceTailData(selectedinvoiceTailName: String) {
         val invoiceTailDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceTailDao()
 
@@ -362,12 +346,10 @@ class TransportDataFormFragment : Fragment() {
             binding.faxTailNum.text=invoiceTail?.faxNumber?.toEditable()
         }
     }
-
     private fun updateCompanyData(selectedCompanyName: String) {
         getDataOfCompany(selectedCompanyName)
         initializeEmployeeSpinner(selectedCompanyName)
     }
-
     private fun getDataOfCompany(companyName: String) {
         val companyDao = AppDatabase.getDatabase(requireContext().applicationContext).companyDao()
 
@@ -376,10 +358,7 @@ class TransportDataFormFragment : Fragment() {
             binding.companyDetailsTv.text = details.toEditable()
         }
     }
-
-
     private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
-
     private fun NavigateToTransportPrientActivity() {
         val invoiceSubject = binding.invoiceSubjectSpinner.selectedItem?.toString()
         val companyName = binding.companySpinner.selectedItem?.toString()
@@ -522,5 +501,226 @@ class TransportDataFormFragment : Fragment() {
         startActivity(intent)
     }
 
+    private fun loadSavedValues() {
+        val context = context ?: return
+        val sharedPreferences = context.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
 
+        // العناصر الثابتة
+        binding.dateTv.setText(sharedPreferences.getString("dateTv", ""))
+        binding.companyDetailsTv.setText(sharedPreferences.getString("companyDetailsTv", ""))
+        binding.guestNameTv.setText(sharedPreferences.getString("guestNameTv", ""))
+        binding.totalAmountTv.setText(sharedPreferences.getString("totalAmountTv", ""))
+        binding.totalAmountNumberTv.setText(sharedPreferences.getString("totalAmountNumberTv", ""))
+
+
+        for (i in 1..10) {
+            when (i) {
+                1 -> {
+                    binding.carTypeTv1.setText(sharedPreferences.getString("carTypeTv1", ""))
+                    binding.dateEnteredTv1.setText(sharedPreferences.getString("dateEnteredTv1", ""))
+                    binding.debitTv1.setText(sharedPreferences.getString("debitTv1", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner1, "invoiceDetailsSpinner1")
+                }
+                2 -> {
+                    binding.carTypeTv2.setText(sharedPreferences.getString("carTypeTv2", ""))
+                    binding.dateEnteredTv2.setText(sharedPreferences.getString("dateEnteredTv2", ""))
+                    binding.debitTv2.setText(sharedPreferences.getString("debitTv2", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner2, "invoiceDetailsSpinner2")
+                }
+                3 -> {
+                    binding.carTypeTv3.setText(sharedPreferences.getString("carTypeTv3", ""))
+                    binding.dateEnteredTv3.setText(sharedPreferences.getString("dateEnteredTv3", ""))
+                    binding.debitTv3.setText(sharedPreferences.getString("debitTv3", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner3, "invoiceDetailsSpinner3")
+                }
+                // ... كرر النمط حتى 10
+                10 -> {
+                    binding.carTypeTv10.setText(sharedPreferences.getString("carTypeTv10", ""))
+                    binding.dateEnteredTv10.setText(sharedPreferences.getString("dateEnteredTv10", ""))
+                    binding.debitTv10.setText(sharedPreferences.getString("debitTv10", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner10, "invoiceDetailsSpinner10")
+                }
+            }
+        }
+
+        // العناصر المنسدلة الرئيسية
+        setSpinnerSelection(binding.invoiceSubjectSpinner, "invoiceSubjectSpinner")
+        setSpinnerSelection(binding.companySpinner, "companySpinner")
+        setSpinnerSelection(binding.employeeSpinner, "employeeSpinner")
+        setSpinnerSelection(binding.invoiceTailSpinner, "invoiceTailSpinner")
+    }
+
+    private fun setSpinnerSelection(spinner: Spinner, key: String) {
+        val sharedPreferences = context?.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
+        val value = sharedPreferences?.getString(key, null) ?: return
+        val adapter = spinner.adapter as? ArrayAdapter<*> ?: return
+
+        // البحث عن العنصر في الـ Adapter
+        for (i in 0 until adapter.count) {
+            if (adapter.getItem(i).toString() == value) {
+                spinner.setSelection(i)
+                break
+            }
+        }
+    }
+
+    private fun setupAutoSaveListener() {
+        binding?.apply {
+            dateTv?.addTextChangedListener { saveValue("dateTv", it?.toString()?.trim().orEmpty()) }
+
+            companyDetailsTv?.addTextChangedListener { saveValue("companyDetailsTv", it?.toString()?.trim().orEmpty()) }
+            guestNameTv?.addTextChangedListener { saveValue("guestNameTv", it?.toString()?.trim().orEmpty()) }
+            totalAmountTv?.addTextChangedListener { saveValue("totalAmountTv", it?.toString()?.trim().orEmpty()) }
+            totalAmountNumberTv?.addTextChangedListener { saveValue("totalAmountNumberTv", it?.toString()?.trim().orEmpty()) }
+
+            setupSpinnerAutoSave(invoiceSubjectSpinner, "invoiceSubjectSpinner")
+            setupSpinnerAutoSave(companySpinner, "companySpinner")
+            setupSpinnerAutoSave(employeeSpinner, "employeeSpinner")
+
+            for (i in 1..10) {
+                setupAutoSaveForCarFields(i)
+            }
+        }
+    }
+
+    private fun setupAutoSaveForCarFields(index: Int) {
+        when (index) {
+            1 -> {
+                binding.carTypeTv1.addTextChangedListener {
+                    saveValue("carTypeTv1", it.toString().trim())
+                }
+                binding.dateEnteredTv1.addTextChangedListener {
+                    saveValue("dateEnteredTv1", it.toString().trim())
+                }
+                binding.debitTv1.addTextChangedListener {
+                    saveValue("debitTv1", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner1, "invoiceDetailsSpinner1")
+            }
+            2 -> {
+                binding.carTypeTv2.addTextChangedListener {
+                    saveValue("carTypeTv2", it.toString().trim())
+                }
+                binding.dateEnteredTv2.addTextChangedListener {
+                    saveValue("dateEnteredTv2", it.toString().trim())
+                }
+                binding.debitTv2.addTextChangedListener {
+                    saveValue("debitTv2", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner2, "invoiceDetailsSpinner2")
+            }
+            3 -> {
+                binding.carTypeTv3.addTextChangedListener {
+                    saveValue("carTypeTv3", it.toString().trim())
+                }
+                binding.dateEnteredTv3.addTextChangedListener {
+                    saveValue("dateEnteredTv3", it.toString().trim())
+                }
+                binding.debitTv3.addTextChangedListener {
+                    saveValue("debitTv3", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner3, "invoiceDetailsSpinner3")
+            }
+            4 -> {
+                binding.carTypeTv4.addTextChangedListener {
+                    saveValue("carTypeTv4", it.toString().trim())
+                }
+                binding.dateEnteredTv4.addTextChangedListener {
+                    saveValue("dateEnteredTv4", it.toString().trim())
+                }
+                binding.debitTv4.addTextChangedListener {
+                    saveValue("debitTv4", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner4, "invoiceDetailsSpinner4")
+            }
+            5 -> {
+                binding.carTypeTv5.addTextChangedListener {
+                    saveValue("carTypeTv5", it.toString().trim())
+                }
+                binding.dateEnteredTv5.addTextChangedListener {
+                    saveValue("dateEnteredTv5", it.toString().trim())
+                }
+                binding.debitTv5.addTextChangedListener {
+                    saveValue("debitTv5", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner5, "invoiceDetailsSpinner5")
+            }
+            6 -> {
+                binding.carTypeTv6.addTextChangedListener {
+                    saveValue("carTypeTv6", it.toString().trim())
+                }
+                binding.dateEnteredTv6.addTextChangedListener {
+                    saveValue("dateEnteredTv6", it.toString().trim())
+                }
+                binding.debitTv6.addTextChangedListener {
+                    saveValue("debitTv6", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner6, "invoiceDetailsSpinner6")
+            }
+            7 -> {
+                binding.carTypeTv7.addTextChangedListener {
+                    saveValue("carTypeTv7", it.toString().trim())
+                }
+                binding.dateEnteredTv7.addTextChangedListener {
+                    saveValue("dateEnteredTv7", it.toString().trim())
+                }
+                binding.debitTv7.addTextChangedListener {
+                    saveValue("debitTv7", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner7, "invoiceDetailsSpinner7")
+            }
+            8 -> {
+                binding.carTypeTv8.addTextChangedListener {
+                    saveValue("carTypeTv8", it.toString().trim())
+                }
+                binding.dateEnteredTv8.addTextChangedListener {
+                    saveValue("dateEnteredTv8", it.toString().trim())
+                }
+                binding.debitTv8.addTextChangedListener {
+                    saveValue("debitTv8", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner8, "invoiceDetailsSpinner8")
+            }
+            9 -> {
+                binding.carTypeTv9.addTextChangedListener {
+                    saveValue("carTypeTv9", it.toString().trim())
+                }
+                binding.dateEnteredTv9.addTextChangedListener {
+                    saveValue("dateEnteredTv9", it.toString().trim())
+                }
+                binding.debitTv9.addTextChangedListener {
+                    saveValue("debitTv9", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner9, "invoiceDetailsSpinner9")
+            }
+            10 -> {
+                binding.carTypeTv10.addTextChangedListener {
+                    saveValue("carTypeTv10", it.toString().trim())
+                }
+                binding.dateEnteredTv10.addTextChangedListener {
+                    saveValue("dateEnteredTv10", it.toString().trim())
+                }
+                binding.debitTv10.addTextChangedListener {
+                    saveValue("debitTv10", it.toString().trim())
+                }
+                setupSpinnerAutoSave(binding.invoiceDetailsSpinner10, "invoiceDetailsSpinner10")
+            }
+        }
+    }
+
+    private fun setupSpinnerAutoSave(spinner: Spinner?, key: String) {
+        spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedItem = parent?.getItemAtPosition(position)?.toString() ?: return
+                saveValue(key, selectedItem)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+    }
+
+    private fun saveValue(key: String, value: String) {
+        val sharedPreferences = context?.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
+        sharedPreferences?.edit()?.putString(key, value)?.apply()
+    }
 }

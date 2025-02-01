@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:layout_gravity="end"
-            android:text="Subject:"
+            android:text="Attention To:"
             android:textSize="10dp"
             android:textStyle="bold"
             android:gravity="start"
@@ -966,13 +966,26 @@ transportation for your guest as follow"
         android:layout_height="wrap_content"
 
         android:text="We are pleased to receive your contacts in case of any enquiry.
-Allah grants success "
+"
         android:textSize="10dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Allah grants success "
+        android:textSize="10dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="45dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:background="@android:color/transparent"
         />
 

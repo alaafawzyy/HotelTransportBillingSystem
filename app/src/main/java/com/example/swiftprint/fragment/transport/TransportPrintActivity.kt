@@ -1,6 +1,7 @@
 package com.example.swiftprint.fragment.transport
 
 import android.content.ContentValues
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
@@ -17,22 +18,70 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import android.graphics.pdf.PdfDocument
+import androidx.core.widget.addTextChangedListener
 import java.util.*
 
 class TransportPrintActivity : AppCompatActivity() {
     lateinit var binding: ActivityTransportPrintBinding
-
+    private val sharedPrefKey = "TransportPreferences"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityTransportPrintBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        loadSavedValues()
+        setupAutoSaveListener()
         initView()
 
         binding.logo.setOnClickListener {
             takeScreenshotAndSaveAsPDF()
         }
+    }
+
+    private fun loadSavedValues() {
+        val sharedPreferences = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
+        binding.dateTv.setText(sharedPreferences.getString("dateTv",  binding.dateTv.text.toString()))
+        binding.rate1.setText(sharedPreferences.getString("rate1",  binding.rate1.text.toString()))
+        binding.invince1.setText(sharedPreferences.getString("invince1",  binding.invince1.text.toString()))
+        binding.date1.setText(sharedPreferences.getString("date1",  binding.date1.text.toString()))
+        binding.car1.setText(sharedPreferences.getString("car1",  binding.car1.text.toString()))
+        binding.totalAmountTv.setText(sharedPreferences.getString("totalAmountTv",  binding.totalAmountTv.text.toString()))
+        binding.totalAmountTvAbc.setText(sharedPreferences.getString("totalAmountTvAbc",  binding.totalAmountTvAbc.text.toString()))
+        binding.guest.setText(sharedPreferences.getString("guest",  binding.guest.text.toString()))
+    }
+
+    private fun setupAutoSaveListener() {
+        binding.dateTv.addTextChangedListener {
+            saveValue("dateTv", binding.dateTv.text.toString().trim())
+        }
+        binding.rate1.addTextChangedListener {
+            saveValue("rate1", binding.rate1.text.toString().trim())
+        }
+        binding.invince1.addTextChangedListener {
+            saveValue("invince1", binding.invince1.text.toString().trim())
+        }
+        binding.date1.addTextChangedListener {
+            saveValue("date1", binding.date1.text.toString().trim())
+        }
+        binding.car1.addTextChangedListener {
+            saveValue("car1", binding.car1.text.toString().trim())
+        }
+        binding.totalAmountTv.addTextChangedListener {
+            saveValue("totalAmountTv", binding.totalAmountTv.text.toString().trim())
+        }
+        binding.totalAmountTvAbc.addTextChangedListener {
+            saveValue("totalAmountTvAbc", binding.totalAmountTvAbc.text.toString().trim())
+        }
+        binding.guest.addTextChangedListener {
+            saveValue("guest", binding.guest.text.toString().trim())
+        }
+    }
+
+    private fun saveValue(key: String, value: String) {
+        val sharedPreferences = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString(key, value)
+        editor.apply()
     }
 
     private fun takeScreenshotAndSaveAsPDF() {
