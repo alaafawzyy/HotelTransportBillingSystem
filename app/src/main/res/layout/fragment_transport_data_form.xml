@@ -152,6 +152,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/car_type_tv1"
+                        android:tag="car_type_tv1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Car Type"
@@ -166,6 +167,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/debit_tv1"
+                        android:tag="debit_tv1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Rate"
@@ -177,6 +179,7 @@
 
                 <TextView
                     android:id="@+id/date_entered_tv1"
+                    android:tag="date_entered_tv1"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:padding="18dp"
@@ -192,6 +195,7 @@
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner1"
+                    android:tag="invoice_details_spinner1"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:layout_marginStart="10dp"

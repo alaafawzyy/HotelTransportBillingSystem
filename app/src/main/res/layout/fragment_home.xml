@@ -18,16 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:foregroundGravity="center"
-        android:backgroundTint="@android:color/transparent"
+        android:background="#0E162C"
+
       >
 
-        <ImageView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:background="@drawable/makahh"
-            />
         <androidx.cardview.widget.CardView
             android:id="@+id/hotel_card"
             android:layout_width="180dp"

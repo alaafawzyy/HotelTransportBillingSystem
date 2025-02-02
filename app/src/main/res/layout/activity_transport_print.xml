@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:layout_gravity="end"
-            android:text="Attention To:"
+            android:text="Attention:"
             android:textSize="10dp"
             android:textStyle="bold"
             android:gravity="start"

@@ -216,68 +216,7 @@ class TransportDataFormFragment : Fragment() {
             binding.employeeSpinner.adapter = adapter
         }
     }
-    private fun initializeInvoiceDetailsSpinners() {
-        val invoiceDetailsDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceDetailsDao()
 
-        invoiceDetailsDao.getAllInvoiceDetails().observe(viewLifecycleOwner) { invoiceDetails ->
-
-            val details = invoiceDetails ?: emptyList()
-            val invoiceDetailsNamesList = details.filterNotNull()
-            if (invoiceDetailsNamesList != invoiceDetailsNamesCache) {
-                invoiceDetailsNamesCache.clear()
-                invoiceDetailsNamesCache.add("") // إضافة خيار فارغ في أول القائمة
-                invoiceDetailsNamesCache.addAll(invoiceDetailsNamesList)
-
-                // إنشاء Adapter مشترك لكل Spinner
-                val adapter = ArrayAdapter(
-                    requireContext(),
-                    android.R.layout.simple_spinner_item,
-                    invoiceDetailsNamesCache
-                )
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-                val spinners = listOf(
-                    binding.invoiceDetailsSpinner1,
-                    binding.invoiceDetailsSpinner2,
-                    binding.invoiceDetailsSpinner3,
-                    binding.invoiceDetailsSpinner4,
-                    binding.invoiceDetailsSpinner5,
-                    binding.invoiceDetailsSpinner6,
-                    binding.invoiceDetailsSpinner7,
-                    binding.invoiceDetailsSpinner8,
-                    binding.invoiceDetailsSpinner9,
-                    binding.invoiceDetailsSpinner10
-                )
-
-                // تعيين Adapter لكل Spinner
-                spinners.forEach { spinner ->
-                    spinner.adapter = adapter
-                }
-
-                // إعداد حدث اختيار لكل Spinner
-                spinners.forEachIndexed { index, spinner ->
-                    spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                        override fun onItemSelected(
-                            parent: AdapterView<*>?,
-                            view: View?,
-                            position: Int,
-                            id: Long
-                        ) {
-                            // إذا كانت القيمة المختارة هي الفارغة
-                            if (position == 0) {
-                                println("Spinner $index is empty (no selection)")
-                            } else {
-                                val selectedDetail = invoiceDetailsNamesCache[position]
-                                println("Spinner $index selected value: $selectedDetail")
-                            }
-                        }
-
-                        override fun onNothingSelected(parent: AdapterView<*>?) {}
-                    }
-                }
-            }
-        }
-    }
     private fun initializeInvoiceSubjectSpinner() {
         val invoiceSubjectsDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceSubjectDao()
 
@@ -501,6 +440,66 @@ class TransportDataFormFragment : Fragment() {
         startActivity(intent)
     }
 
+    private fun initializeInvoiceDetailsSpinners() {
+        val invoiceDetailsDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceDetailsDao()
+
+        invoiceDetailsDao.getAllInvoiceDetails().observe(viewLifecycleOwner) { invoiceDetails ->
+            val details = invoiceDetails ?: emptyList()
+            val invoiceDetailsNamesList = details.filterNotNull()
+            if (invoiceDetailsNamesList != invoiceDetailsNamesCache) {
+                invoiceDetailsNamesCache.clear()
+                invoiceDetailsNamesCache.add("") // إضافة خيار فارغ في أول القائمة
+                invoiceDetailsNamesCache.addAll(invoiceDetailsNamesList)
+
+                val adapter = ArrayAdapter(
+                    requireContext(),
+                    android.R.layout.simple_spinner_item,
+                    invoiceDetailsNamesCache
+                )
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+                val spinners = listOf(
+                    binding.invoiceDetailsSpinner1,
+                    binding.invoiceDetailsSpinner2,
+                    binding.invoiceDetailsSpinner3,
+                    binding.invoiceDetailsSpinner4,
+                    binding.invoiceDetailsSpinner5,
+                    binding.invoiceDetailsSpinner6,
+                    binding.invoiceDetailsSpinner7,
+                    binding.invoiceDetailsSpinner8,
+                    binding.invoiceDetailsSpinner9,
+                    binding.invoiceDetailsSpinner10
+                )
+
+                spinners.forEach { spinner ->
+                    spinner.adapter = adapter
+                    setSpinnerSelection(spinner, "invoice_details_spinner${spinners.indexOf(spinner) + 1}")
+                }
+
+                spinners.forEachIndexed { index, spinner ->
+                    spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                        override fun onItemSelected(
+                            parent: AdapterView<*>?,
+                            view: View?,
+                            position: Int,
+                            id: Long
+                        ) {
+                            if (position == 0) {
+                                println("Spinner $index is empty (no selection)")
+                                saveValue("invoice_details_spinner${index + 1}", "") // حفظ قيمة فارغة
+                            } else {
+                                val selectedDetail = invoiceDetailsNamesCache[position]
+                                println("Spinner $index selected value: $selectedDetail")
+                                saveValue("invoice_details_spinner${index + 1}", selectedDetail) // حفظ القيمة المحددة
+                            }
+                        }
+
+                        override fun onNothingSelected(parent: AdapterView<*>?) {}
+                    }
+                }
+            }
+        }
+    }
     private fun loadSavedValues() {
         val context = context ?: return
         val sharedPreferences = context.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
@@ -549,13 +548,11 @@ class TransportDataFormFragment : Fragment() {
         setSpinnerSelection(binding.employeeSpinner, "employeeSpinner")
         setSpinnerSelection(binding.invoiceTailSpinner, "invoiceTailSpinner")
     }
-
     private fun setSpinnerSelection(spinner: Spinner, key: String) {
         val sharedPreferences = context?.getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
         val value = sharedPreferences?.getString(key, null) ?: return
         val adapter = spinner.adapter as? ArrayAdapter<*> ?: return
 
-        // البحث عن العنصر في الـ Adapter
         for (i in 0 until adapter.count) {
             if (adapter.getItem(i).toString() == value) {
                 spinner.setSelection(i)
@@ -563,7 +560,6 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
     private fun setupAutoSaveListener() {
         binding?.apply {
             dateTv?.addTextChangedListener { saveValue("dateTv", it?.toString()?.trim().orEmpty()) }
@@ -582,7 +578,6 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
-
     private fun setupAutoSaveForCarFields(index: Int) {
         when (index) {
             1 -> {
