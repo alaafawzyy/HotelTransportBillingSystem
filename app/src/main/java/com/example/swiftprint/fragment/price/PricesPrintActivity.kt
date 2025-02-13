@@ -320,9 +320,6 @@ class PricesPrintActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
     }
 
-
-
-
     private fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
 }

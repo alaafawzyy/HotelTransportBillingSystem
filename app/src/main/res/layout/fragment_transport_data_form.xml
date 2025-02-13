@@ -176,12 +176,16 @@
             </LinearLayout>
 
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <TextView
                     android:id="@+id/date_entered_tv1"
                     android:tag="date_entered_tv1"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:layout_gravity="center"
@@ -192,13 +196,20 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/date_delete_ic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/baseline_delete_24"/>
+            </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner1"
                     android:tag="invoice_details_spinner1"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:layout_marginStart="10dp"
+
                     android:padding="18sp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/spinner_border"
@@ -262,21 +273,34 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <TextView
                     android:id="@+id/date_entered_tv2"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
                     android:textColorHint="#737171"
-                                        android:hint="Date"
+                    android:hint="Date"
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/date_delete_ic2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/baseline_delete_24"/>
+            </LinearLayout>
+
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner2"
@@ -346,13 +370,17 @@
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="80dp"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="10dp">
                 <TextView
                     android:id="@+id/date_entered_tv3"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -361,6 +389,13 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+                 <ImageView
+                     android:id="@+id/date_delete_ic3"
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="25dp"
+                     android:src="@drawable/baseline_delete_24"/>
+             </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner3"
@@ -431,13 +466,17 @@
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
                 <TextView
                     android:id="@+id/date_entered_tv4"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -446,6 +485,13 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/date_delete_ic4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_delete_24"/>
+        </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner4"
@@ -516,13 +562,18 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
-                <TextView
+            <TextView
                     android:id="@+id/date_entered_tv5"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -531,6 +582,14 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/date_delete_ic5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/baseline_delete_24"/>
+            </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner5"
@@ -600,14 +659,19 @@
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
 
-                <TextView
+            <TextView
                     android:id="@+id/date_entered_tv6"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -616,6 +680,13 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/date_delete_ic6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_delete_24"/>
+        </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner6"
@@ -686,13 +757,18 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
-                <TextView
+            <TextView
                     android:id="@+id/date_entered_tv7"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -701,6 +777,13 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/date_delete_ic7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_delete_24"/>
+        </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner7"
@@ -772,13 +855,18 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
-                <TextView
+            <TextView
                     android:id="@+id/date_entered_tv8"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -787,6 +875,13 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/date_delete_ic8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/baseline_delete_24"/>
+            </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner8"
@@ -858,13 +953,19 @@
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
-                <TextView
+
+            <TextView
                     android:id="@+id/date_entered_tv9"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -873,6 +974,14 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/date_delete_ic9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/baseline_delete_24"/>
+        </LinearLayout>
 
                 <Spinner
                     android:id="@+id/invoice_details_spinner9"
@@ -943,14 +1052,20 @@
                         />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
 
-                <TextView
+
+            <TextView
                     android:id="@+id/date_entered_tv10"
                     android:layout_width="180dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:padding="18dp"
                     android:layout_weight="1"
                     android:background="@drawable/card_border2"
@@ -959,8 +1074,16 @@
                     android:textStyle="bold"
                     android:textColor="#B1ADAD"
                     android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/date_delete_ic10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/baseline_delete_24"/>
+            </LinearLayout>
 
-                <Spinner
+
+            <Spinner
                     android:id="@+id/invoice_details_spinner10"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"

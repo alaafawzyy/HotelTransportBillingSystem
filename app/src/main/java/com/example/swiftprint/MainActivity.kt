@@ -1,8 +1,4 @@
 
-
-
-
-
 package com.example.swiftprint
 
 import android.content.Intent

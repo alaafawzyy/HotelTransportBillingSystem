@@ -33,8 +33,6 @@ class OperationContractPrintActivity : AppCompatActivity() {
         binding = ActivityOperationContractPrintBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initView()
-
-        // Request permission for devices with Android 9 or lower
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -42,7 +40,6 @@ class OperationContractPrintActivity : AppCompatActivity() {
                 captureAndSavePdf()
             }
         } else {
-            // No need to request WRITE_EXTERNAL_STORAGE in Android 10 and above
             captureAndSavePdf()
         }
     }

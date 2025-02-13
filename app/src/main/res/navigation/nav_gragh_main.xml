@@ -25,7 +25,7 @@
         app:destination="@id/hotelFragment" />
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="com.example.swiftprint.HotelFragment"
+        android:name="com.example.swiftprint.fragment.hotel.fragment.HotelFragment"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" />
     <fragment

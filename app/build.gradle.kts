@@ -12,7 +12,7 @@ android {
         applicationId = "com.example.swiftprint"
         minSdk = 24
         targetSdk = 34
-        versionCode = 17
+        versionCode = 21
 
         versionName = "1.0"
 

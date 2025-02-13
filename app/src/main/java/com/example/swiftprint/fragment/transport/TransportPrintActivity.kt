@@ -18,6 +18,8 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import android.graphics.pdf.PdfDocument
+import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import java.util.*
 
@@ -34,7 +36,7 @@ class TransportPrintActivity : AppCompatActivity() {
         initView()
 
         binding.logo.setOnClickListener {
-            takeScreenshotAndSaveAsPDF()
+            takeScreenshotAndSaveAsPdf()
         }
     }
 
@@ -84,54 +86,60 @@ class TransportPrintActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    private fun takeScreenshotAndSaveAsPDF() {
-        // Take screenshot of the current screen
-        val bitmap = getScreenshot()
+    private fun takeScreenshotAndSaveAsPdf() {
+        val screenshot = takeScreenshot(binding.root)
 
-        // Convert screenshot to PDF and save it to the device
-        saveBitmapAsPDF(bitmap)
+        if (screenshot != null) {
+            val pdfFile = createPdfFromBitmap(screenshot)
+            if (pdfFile != null) {
+                showMessage("PDF saved at: ${pdfFile.absolutePath}")
+            } else {
+                showMessage("Failed to create PDF.")
+            }
+        } else {
+            showMessage("Failed to take screenshot.")
+        }
     }
 
-    private fun getScreenshot(): Bitmap {
-        // Create a Bitmap to capture the view content
-        val view = binding.root
-        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        view.draw(canvas)
-        return bitmap
+    private fun takeScreenshot(view: View): Bitmap? {
+        return try {
+            val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
+            val canvas = android.graphics.Canvas(bitmap)
+            view.draw(canvas)
+            bitmap
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
     }
 
-    private fun saveBitmapAsPDF(bitmap: Bitmap) {
-        val pdfDocument = PdfDocument()
-        val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
-        val page = pdfDocument.startPage(pageInfo)
+    private fun createPdfFromBitmap(bitmap: Bitmap): File? {
+        return try {
+            val pdfDocument = PdfDocument()
+            val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
+            val page = pdfDocument.startPage(pageInfo)
+            val canvas = page.canvas
+            canvas.drawBitmap(bitmap, 0f, 0f, null)
+            pdfDocument.finishPage(page)
 
-        // Draw the bitmap to the PDF document page
-        val canvas = page.canvas
-        canvas.drawBitmap(bitmap, 0f, 0f, null)
+            // Save PDF to external files directory
+            val pdfDir = ContextCompat.getExternalFilesDirs(applicationContext, null)[0]
+            val pdfFile = File(pdfDir, "screenshot.pdf")
 
-        pdfDocument.finishPage(page)
-
-        // Save the PDF to external storage
-        try {
-            val pdfDir = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "SwiftPrint")
-            if (!pdfDir.exists()) {
-                pdfDir.mkdirs()
+            FileOutputStream(pdfFile).use { output ->
+                pdfDocument.writeTo(output)
             }
 
-            val pdfFile = File(pdfDir, "screenshot_${System.currentTimeMillis()}.pdf")
-            val outputStream: OutputStream = FileOutputStream(pdfFile)
-            pdfDocument.writeTo(outputStream)
-            outputStream.close()
-
-            Toast.makeText(this, "PDF saved to: ${pdfFile.absolutePath}", Toast.LENGTH_LONG).show()
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-            Toast.makeText(this, "Failed to save PDF", Toast.LENGTH_SHORT).show()
-        } finally {
             pdfDocument.close()
+            pdfFile
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
         }
+    }
+
+    private fun showMessage(message: String) {
+        Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
     }
 
 

@@ -70,6 +70,17 @@ class TransportDataFormFragment : Fragment() {
         binding.addEntered9.setOnClickListener {changeVisibility9()}
         binding.addEntered10.setOnClickListener {changeVisibility10()}
 
+        binding.dateDeleteIc.setOnClickListener{binding.dateEnteredTv1.text=null}
+        binding.dateDeleteIc2.setOnClickListener{binding.dateEnteredTv2.text=null}
+        binding.dateDeleteIc3.setOnClickListener{binding.dateEnteredTv3.text=null}
+        binding.dateDeleteIc4.setOnClickListener{binding.dateEnteredTv4.text=null}
+        binding.dateDeleteIc5.setOnClickListener{binding.dateEnteredTv5.text=null}
+        binding.dateDeleteIc6.setOnClickListener{binding.dateEnteredTv6.text=null}
+        binding.dateDeleteIc7.setOnClickListener{binding.dateEnteredTv7.text=null}
+        binding.dateDeleteIc8.setOnClickListener{binding.dateEnteredTv8.text=null}
+        binding.dateDeleteIc9.setOnClickListener{binding.dateEnteredTv9.text=null}
+        binding.dateDeleteIc10.setOnClickListener{binding.dateEnteredTv10.text=null}
+
     }
     private fun showDatePicker2(textViewNumber: Int) {
         val picker = DatePickerDialog(
@@ -243,6 +254,7 @@ class TransportDataFormFragment : Fragment() {
             }
         }
     }
+
     private fun initializeInvoiceTailSpinner() {
         val invoiceTailDao = AppDatabase.getDatabase(requireContext().applicationContext).invoiceTailDao()
         invoiceTailDao.getAllInvoiceTail().observe(viewLifecycleOwner) { invoiceTailName ->
@@ -532,7 +544,43 @@ class TransportDataFormFragment : Fragment() {
                     binding.debitTv3.setText(sharedPreferences.getString("debitTv3", ""))
                     setSpinnerSelection(binding.invoiceDetailsSpinner3, "invoiceDetailsSpinner3")
                 }
-                // ... كرر النمط حتى 10
+                4 -> {
+                    binding.carTypeTv4.setText(sharedPreferences.getString("carTypeTv4", ""))
+                    binding.dateEnteredTv4.setText(sharedPreferences.getString("dateEnteredTv4", ""))
+                    binding.debitTv4.setText(sharedPreferences.getString("debitTv4", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner4, "invoiceDetailsSpinner4")
+                }
+                5 -> {
+                    binding.carTypeTv5.setText(sharedPreferences.getString("carTypeTv5", ""))
+                    binding.dateEnteredTv5.setText(sharedPreferences.getString("dateEnteredTv5", ""))
+                    binding.debitTv5.setText(sharedPreferences.getString("debitTv5", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner5, "invoiceDetailsSpinner5")
+                }
+                6 -> {
+                    binding.carTypeTv6.setText(sharedPreferences.getString("carTypeTv6", ""))
+                    binding.dateEnteredTv6.setText(sharedPreferences.getString("dateEnteredTv6", ""))
+                    binding.debitTv6.setText(sharedPreferences.getString("debitTv6", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner6, "invoiceDetailsSpinner6")
+                }
+                7 -> {
+                    binding.carTypeTv7.setText(sharedPreferences.getString("carTypeTv7", ""))
+                    binding.dateEnteredTv7.setText(sharedPreferences.getString("dateEnteredTv7", ""))
+                    binding.debitTv7.setText(sharedPreferences.getString("debitTv7", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner7, "invoiceDetailsSpinner7")
+                }
+                8 -> {
+                    binding.carTypeTv8.setText(sharedPreferences.getString("carTypeTv8", ""))
+                    binding.dateEnteredTv8.setText(sharedPreferences.getString("dateEnteredTv8", ""))
+                    binding.debitTv8.setText(sharedPreferences.getString("debitTv8", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner8, "invoiceDetailsSpinner8")
+                }
+                9 -> {
+                    binding.carTypeTv9.setText(sharedPreferences.getString("carTypeTv9", ""))
+                    binding.dateEnteredTv9.setText(sharedPreferences.getString("dateEnteredTv9", ""))
+                    binding.debitTv9.setText(sharedPreferences.getString("debitTv9", ""))
+                    setSpinnerSelection(binding.invoiceDetailsSpinner9, "invoiceDetailsSpinner9")
+                }
+
                 10 -> {
                     binding.carTypeTv10.setText(sharedPreferences.getString("carTypeTv10", ""))
                     binding.dateEnteredTv10.setText(sharedPreferences.getString("dateEnteredTv10", ""))

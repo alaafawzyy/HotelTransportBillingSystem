@@ -12,8 +12,11 @@ import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import com.example.swiftprint.databinding.ActivityOperationNormalPrintBinding
+import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
 
 class OperationNormalPrintActivity : AppCompatActivity() {
@@ -74,9 +77,7 @@ class OperationNormalPrintActivity : AppCompatActivity() {
     }
     private fun initView() {
         binding.logo.setOnClickListener {
-            val rootView = findViewById<View>(android.R.id.content)
-            val bitmap = captureScreen(rootView)
-            saveBitmapAsPdfWithMediaStore(bitmap, this)
+            takeScreenshotAndSaveAsPdf()
         }
 
         val selectedCarName = intent.getStringExtra("car_name")
@@ -113,46 +114,59 @@ class OperationNormalPrintActivity : AppCompatActivity() {
         binding.endTrip.text = "الي : ${endTrip}"
     }
 
-    fun captureScreen(view: View): Bitmap {
-        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        view.draw(canvas)
-        return bitmap
-    }
+    private fun takeScreenshotAndSaveAsPdf() {
+        val screenshot = takeScreenshot(binding.root)
 
-    fun saveBitmapAsPdfWithMediaStore(bitmap: Bitmap, context: Context) {
-        val pdfDocument = PdfDocument()
-        val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
-        val page = pdfDocument.startPage(pageInfo)
-
-        val canvas = page.canvas
-        val paint = Paint()
-        canvas.drawBitmap(bitmap, 0f, 0f, paint)
-
-        pdfDocument.finishPage(page)
-
-        val resolver = context.contentResolver
-        val contentValues = ContentValues().apply {
-            put(MediaStore.MediaColumns.DISPLAY_NAME, "screenshot.pdf")
-            put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf")
-            put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOCUMENTS)
-        }
-
-        val uri = resolver.insert(MediaStore.Files.getContentUri("external"), contentValues)
-        if (uri != null) {
-            try {
-                resolver.openOutputStream(uri)?.use { outputStream ->
-                    pdfDocument.writeTo(outputStream)
-                    Toast.makeText(context, "تم حفظ الصورة كـ PDF في Documents", Toast.LENGTH_SHORT).show()
-                }
-            } catch (e: IOException) {
-                e.printStackTrace()
-                Toast.makeText(context, "حدث خطأ أثناء الحفظ", Toast.LENGTH_SHORT).show()
+        if (screenshot != null) {
+            val pdfFile = createPdfFromBitmap(screenshot)
+            if (pdfFile != null) {
+                showMessage("PDF saved at: ${pdfFile.absolutePath}")
+            } else {
+                showMessage("Failed to create PDF.")
             }
         } else {
-            Toast.makeText(context, "فشل في إنشاء الملف", Toast.LENGTH_SHORT).show()
+            showMessage("Failed to take screenshot.")
         }
+    }
 
-        pdfDocument.close()
+    private fun takeScreenshot(view: View): Bitmap? {
+        return try {
+            val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
+            val canvas = android.graphics.Canvas(bitmap)
+            view.draw(canvas)
+            bitmap
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    private fun createPdfFromBitmap(bitmap: Bitmap): File? {
+        return try {
+            val pdfDocument = PdfDocument()
+            val pageInfo = PdfDocument.PageInfo.Builder(bitmap.width, bitmap.height, 1).create()
+            val page = pdfDocument.startPage(pageInfo)
+            val canvas = page.canvas
+            canvas.drawBitmap(bitmap, 0f, 0f, null)
+            pdfDocument.finishPage(page)
+
+            // Save PDF to external files directory
+            val pdfDir = ContextCompat.getExternalFilesDirs(applicationContext, null)[0]
+            val pdfFile = File(pdfDir, "screenshot.pdf")
+
+            FileOutputStream(pdfFile).use { output ->
+                pdfDocument.writeTo(output)
+            }
+
+            pdfDocument.close()
+            pdfFile
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    private fun showMessage(message: String) {
+        Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
     }
 }

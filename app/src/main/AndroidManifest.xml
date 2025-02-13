@@ -35,7 +35,7 @@
             android:name=".fragment.operation.OperationNormalPrintActivity"
             android:exported="false" />
         <activity
-            android:name=".TiketDetailsActivity"
+            android:name=".fragment.hotel.tiket.TiketDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
