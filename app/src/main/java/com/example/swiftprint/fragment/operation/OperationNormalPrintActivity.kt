@@ -104,8 +104,8 @@ class OperationNormalPrintActivity : AppCompatActivity() {
         binding.phoneNumberTv.text = driverPhone
         binding.carTypeTv.text = selectedCarName
         binding.boardNumTv.text = carModel
-        binding.clientNameTv.text = " العميل :${clientName}"
-        binding.clientNumTv.text = "رقم العميل : ${clientPhone}"
+        binding.clientNameTv.text = " الضيف :${clientName}"
+        binding.clientNumTv.text = "رقم التواصل : ${clientPhone}"
         binding.tripNumTv.text = tripNumber
         binding.hallTv.text = arrivalHall
         binding.driverNameTv.text = selectedDriverName

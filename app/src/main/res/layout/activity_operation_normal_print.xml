@@ -408,7 +408,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/card_border"
-                android:text="بيانات العميل"
+                android:text="بيانات الضيف"
                 android:layout_gravity="center"
                 android:paddingTop="4dp"
                 android:paddingStart="8dp"
@@ -433,7 +433,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    tools:text="العميل: ا/خالد علي الجنيبي"
+                    tools:text="الضيف: ا/خالد علي الجنيبي"
                     android:gravity="start"
                     android:textSize="10dp"
                     android:maxLines="1"
@@ -476,6 +476,17 @@
                     android:textColor="#000000"
                     android:background="@drawable/cell_border2"
                     android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="الوقت"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -501,17 +512,7 @@
                     android:background="@drawable/cell_border"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="وقت الوصول"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:textSize="8dp"
-                    android:textColor="#000000"
-                    android:background="@drawable/cell_border"
-                    android:textStyle="bold" />
+
             </TableRow>
 
             <!-- Data Row -->
@@ -527,6 +528,18 @@
                     android:textSize="8dp"
 
                     android:padding="8dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/cell_border2" />
+                <TextView
+                    android:id="@+id/Arrival_time_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="16:50"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="8dp"
+                    android:maxLines="1"
                     android:textColor="#000000"
                     android:background="@drawable/cell_border2" />
 
@@ -555,18 +568,7 @@
                     android:textColor="#000000"
                     android:background="@drawable/cell_border2" />
 
-                <TextView
-                    android:id="@+id/Arrival_time_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:text="16:50"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:textSize="8dp"
-                    android:maxLines="1"
-                    android:textColor="#000000"
-                    android:background="@drawable/cell_border2" />
+
             </TableRow>
         </TableLayout>
 
